@@ -9,7 +9,7 @@ using namespace std;
 typedef pair<int,int> pii;
 typedef long long LL;
 const int MAXN=1000;
-const int MAXNODE=12*MAXN;			//MAIN AMAN JA
+const int MAXNODE=12*MAXN;
 
 int tc;
 
