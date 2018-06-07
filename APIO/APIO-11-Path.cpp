@@ -1,3 +1,13 @@
+/*
+	Idea:
+		The most important part is realizing that there are only little important points, therefore they could be compressed 
+		and we only need to run dijkstra. 
+		
+		The important points include all the Deehive corner, the office, and the home. 
+		if we could move from deehive X to deehive Y from a certain part or segment of the deehive X edge and deehive Y edge,
+		these part endpoints are also considered as important points. In the end, we make edge between those important points, 
+		if we could move from a point to the other point while respecting the rules. 
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define fi first
