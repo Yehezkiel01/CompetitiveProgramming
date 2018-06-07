@@ -1,3 +1,13 @@
+/*
+	Idea:
+		The problem wants us to find out how many string that has prefix s and suffix t. Therefore, we need to build a trie 
+		that stores information about the suffix (another trie inside this trie will be responsible for this) for every prefix. 
+		in order to save memory and time, at the beginning we only need to put the information about the suffix at the last 
+		character of the string. Whenever we need to answer a certain query with prefix s, we need to merge all of the inside 
+		Trie from all of the prefix's decendant. To make it fast, every time we merge 2 trie, we need to merge the smaller trie 
+		to the bigger trie. It is also important to sort the query with a certain order, so that we only need to merge the trie 
+		not to separate them again. 
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define all(x) (x).begin(),(x).end()
