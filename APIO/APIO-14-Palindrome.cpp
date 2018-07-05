@@ -32,7 +32,8 @@ i could be precomputed by trying every midpoints and extend it into the longest 
 sweep algorithm is used. Finally, the value of j do not have to be reduced one by one as what I mentioned above, Instead, we mantain a
 variabel that denotes the amount of minus for all of the integer inside the set.
   
-  Overall Complexity is O(|S|log|S|) but, be careful with the constant factor if you are targeting the full mark.
+  Overall Complexity is O(|S|log|S|) but, be careful with the constant factor if you are targeting the full mark. See the implementation
+below for the details.
 */
 #include <bits/stdc++.h>
 using namespace std;
