@@ -17,19 +17,19 @@ built. Just replace every lcp in the above algorithm with lcpp and the problem i
   To support fast lcpp building process, determining whether a certain range is palindrome in O(1) would be important, hence rolling
 hash is needed (HINT: make one prefix hash sum and one suffix hash sum). Also, finding the largest substrings which is palindrome from a
 predetermined midpoints in log(N) would be necessary, there are different cases for odd and even substrings as the number of substrings'
-midpoints would be different too. find it with binary search + aforementioned rolling hash , so that the expected complexity are met.
+midpoints would be different too. find it with binary search + aforementioned rolling hash, so that the expected complexity are met.
   
   Basically, the idea is to find all j from every i, where i<j and S[i..j] is palindrome, afterward find the best j that could be used
 for lcpp. Moreover, if an i has a list of valid j, then i+1 could use the list by reducing every value of j by 1, and erasing several j
 which is no longer valid. This is supported by the fact that if a range S[l..r] is palindrome than the range S[l+1...r-1] would also be
 a palindrome if l+1<=r-1. 
   
-  not only fixing the previous list, but the list also need to be added with several new j, that is the palindrome started from the i-th
+  Not only fixing the previous list, but the list also need to be added with several new j, that is the palindrome started from the i-th
 character to the j-th character and could not be extended to the (i-1)-th and (j+1)-th character. All of the additional range from every
 i could be precomputed by trying every midpoints and extend it into the longest palindromic substrings in O(log N) as explained above.
   
   Furthermore, the list could be mantained with set, and finding the best j could be done with lcp and upper_bound, in other words, line
-sweep algorithm is used. Finally, the value of j do not have to be reduced one by one as what I mentioned above, Instead, we mantain a
+sweep algorithm is used. Finally, the value of j do not have to be reduced one by one as what I mentioned above, instead, we mantain a
 variabel that denotes the amount of minus for all of the integer inside the set.
   
   Overall Complexity is O(|S|log|S|) but, be careful with the constant factor if you are targeting the full mark. See the implementation
