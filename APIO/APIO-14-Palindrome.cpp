@@ -208,7 +208,6 @@ inline void buildLCPP(){				//sekalian yang seorang diri
 		update(temp<<1);
 		if(temp)
 		{
-			int tambah=i-1-(temp-1);
 			masuk[i-1-(temp-1)].pb((i<<1)-1);
 			keluar[i].pb((i<<1)-1);
 		}
@@ -217,7 +216,6 @@ inline void buildLCPP(){				//sekalian yang seorang diri
 		update((temp<<1)-1);
 		if(temp)
 		{
-			int tambah=i-(temp-1);
 			masuk[i-(temp-1)].pb(i<<1);
 			keluar[i+1].pb(i<<1);
 		}
