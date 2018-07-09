@@ -1,10 +1,16 @@
 /*
   Idea:
-    From observation, we knew that the maximum number of critical edges in a graph is N-1. My idea is to build a forest spanning tree and find all the critical edges in that spanning tree. This is supported by the fact that only those edges, used to build the forest spanning tree, might become critical. At the beginning, there are n separated component. Then, we process the edge one by one. 
+    From observation, we knew that the maximum number of critical edges in a graph is N-1. My idea is to build a forest spanning tree
+and find all the critical edges in that spanning tree. This is supported by the fact that only those edges, used to build the forest
+spanning tree, might become critical. At the beginning, there are n separated component. Then, we process the edge one by one. 
     
-    If an edge connects two nodes that lies in the same component, then that edge must be not critical. Moreover, a cycle will be formed with that edge and several others edge within the component. We need to mark those edges as not critical efficiently, I use LCA and something similiar to prefix sum. 
+    If an edge connects two nodes that lies in the same component, then that edge must be not critical. Moreover, a cycle will be formed
+with that edge and several others edge within the component. We need to mark those edges as not critical efficiently, I use LCA and
+something similiar to prefix sum. 
     
-    If an edge connects two nodes that lies in different component, then that edge might be critical. In addition, we need to merge the two components, it would be beneficial to merge the smaller size component to the bigger size component so that we do not have to rebuild the LCA many times.
+    If an edge connects two nodes that lies in different component, then that edge might be critical. In addition, we need to merge the
+two components, it would be beneficial to merge the smaller size component to the bigger size component so that we do not have to
+rebuild the LCA many times.
 */
 #include <bits/stdc++.h>
 using namespace std;
