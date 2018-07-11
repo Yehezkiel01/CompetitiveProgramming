@@ -9,8 +9,8 @@
       do the query for each part together.
     - Now that we have found the right disjoint set, revert back each node into a connected component, then do binary search to cut down
       the size of each set until only one node left, each of this process will take Log(N) queries.
-	- In total, the whole process will take 3 Log(N) queries. we can optimize this into 2 Log(N) queries by reducing the possibility of 
-	  the second part, after we have reduced the first part into a single node.
+    - In total, the whole process will take 3 Log(N) queries. we can optimize this into 2 Log(N) queries by reducing the possibility of 
+	    the second part, after we have reduced the first part into a single node.
 */
 #include "icc.h"
 #include <bits/stdc++.h>
