@@ -4,11 +4,11 @@
     - Suppose that there are N nodes, which come from n connected component. Divide the nodes into two part, each of which has N/2 nodes.
     - If we do query, and get 1 as the return value, then we have found the right disjoint set.
     - Otherwise, try to divide each part into two other part again, then query them one by one. To speed up the process, we may do the
-	  query for both part together.
+      query for both part together.
     - We keep on dividing each part into two until we find the right disjoint set. This process will take log(N) queries, as long as you 
-	  do the query for each part together.
+      do the query for each part together.
     - Now that we have found the right disjoint set, revert back each node into a connected component, then do binary search to cut down
-	  the size of each set until only one node left, each of this process will take Log(N) queries.
+      the size of each set until only one node left, each of this process will take Log(N) queries.
 	- In total, the whole process will take 3 Log(N) queries. we can optimize this into 2 Log(N) queries by reducing the possibility of 
 	  the second part, after we have reduced the first part into a single node.
 */
