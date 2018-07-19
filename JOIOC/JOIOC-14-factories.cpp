@@ -43,11 +43,12 @@ inline void inisLCA(){
 inline int LCA(int u,int v){
 	if(depth[u]>depth[v])
 		swap(u,v);
-	int beda=depth[v]-depth[u];
-	for(int i=0;i<logn;i++)
-	{		
-		if(beda&(1<<i))
-			v=par[i][v];
+	int beda=depth[v]-depth[u],lsone;
+	while(beda)
+	{
+		lsone=beda&-beda;
+		v=par[__builtin_popcount(lsone-1)][v];
+		beda^=lsone;
 	}
 	if(u==v)
 		return u;
