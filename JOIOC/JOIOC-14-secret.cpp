@@ -1,5 +1,9 @@
 /*
-  The main idea is to precompute several range value, so that every L and R possiblity could be found by merging at most two range of value. Let's take a pivot in n/2, count every range (1,n/2), (2,n/2), ..(n/2,n/2) and also (n/2+1,n/2+1), (n/2+1,n/2+2), ... (n/2+1,n). With these ranges, we could answer all query for L<=n/2 and R>=n/2 by merging at most 2 range value only. for L<n/2 and R <n/2 or L>n/2 and R>n/2 we may apply the same strategy by taking the pivot n/4 and 3n/4. Continue this process (recursion) until all of the L and R possibility could be answered.
+  The main idea is to precompute several range value, so that every L and R possiblity could be found by merging at most two range of 
+value. Let's take a pivot in n/2, count every range (1,n/2), (2,n/2), ..(n/2,n/2) and also (n/2+1,n/2+1), (n/2+1,n/2+2), ... (n/2+1,n). 
+With these ranges, we could answer all query for L<=n/2 and R>=n/2 by merging at most 2 range value only. for L<n/2 and R <n/2 or L>n/2 
+and R>n/2 we may apply the same strategy by taking the pivot n/4 and 3n/4. Continue this process (recursion) until all of the L and R 
+possibility could be answered.
 */
 #include <bits/stdc++.h>
 using namespace std;
